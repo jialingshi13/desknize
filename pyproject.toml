@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "desktop-organizer"
+version = "1.0.0"
+description = "预览并按类型与日期整理桌面上的文件"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+[project.scripts]
+desktop-organizer = "desktop_organizer.__main__:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pyinstaller>=6.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

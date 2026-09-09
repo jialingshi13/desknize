@@ -1,0 +1,7 @@
+build/
+dist/
+__pycache__/
+*.pyc
+*.egg-info/
+.desktop_organizer/
+桌面整理.exe
