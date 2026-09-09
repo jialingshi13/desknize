@@ -8,4 +8,5 @@ def test_write_brush_ico(tmp_path: Path) -> None:
     data = icon.read_bytes()
     assert icon.is_file()
     assert data[:4] == b"\x00\x00\x01\x00"
-    assert len(data) > 100
+    assert data[4:6] == b"\x05\x00"
+    assert len(data) > 1000
